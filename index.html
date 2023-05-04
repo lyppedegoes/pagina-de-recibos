@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="text.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap">
+    <title>Gerador de Recibo</title>
+</head>
+<body>
+    <header>
+        <img src="icon/icon-logo.svg" alt="gerador de recibo">
+        <h1>Gerador de Recibo</h1>
+    </header>
+
+    <main>
+
+        <section class="dados">
+            <div class="dados-recebedor">
+                <h2>Dados do recebedor</h2>            
+                    <div class="input-container">
+                        <label for="recebedor-nome" class="input-label"></label>
+                        <input type="text" id="recebedor-nome" class="input-field" placeholder="Nome ou empresa">
+                    </div>
+                    <div class="input-container">
+                        <label for="valor" class="input-label"></label>
+                        <input type="number" id="valor" class="input-field" placeholder="Valor R$">
+                    </div>
+            </div>
+
+            <div class="dados-emitente">
+                <h2>Dados do emitente</h2>
+                <div class="input-container">
+                    <label for="emitente-nome" class="input-label"></label>
+                    <input type="text" id="emitente-nome" class="input-field" placeholder="Nome do representante">
+                </div>
+                <div class="input-container">
+                    <label for="doc" class="input-label"></label>
+                    <input type="number" id="valor" class="input-field" placeholder="CPF ou CNPJ">
+                </div>
+                <div class="input-container">
+                    <label for="emitente-empresa" class="input-label"></label>
+                    <input type="text" id="emitente-empresa" class="input-field" placeholder="Empresa">
+                </div>
+                <div class="input-container">
+                    <label for="emitente-data" class="input-label"></label>
+                    <input type="date" id="emitente-data" class="input-field" placeholder="Data do Recibo">
+                </div>
+            </div>
+        </section>
+            
+        <fieldset class="serv-prod">
+            <h4>Selecione o tipo de recibo:</h4>
+            <div>
+            <input type="radio" id="servico" name="servico" value=""
+                    checked>
+            <label for="servico">Serviço</label>
+            </div>
+        
+            <div>
+            <input type="radio" id="produto" name="produto" value="">
+            <label for="produto">Produto</label>
+            </div>  
+        </fieldset>
+            
+            <section class="descricao">
+                <div class="descricao-container">
+                    <label for="descricao"><h2>Descrição</h2></label>
+                    <textarea id="descricao" name="descricao"></textarea>
+                </div>
+            </section>
+            
+            <section class="upload">
+
+                <div class="logo">
+                    <img src="icon/icon-logo.svg" alt="inserir logo">
+                    <h4>arraste a imagem da sua LOGO aqui ou selecione um arquivo</h4>
+                </div>
+                <div class="sign">
+                    <img src="icon/icon-sign.svg" alt="inserir logo">
+                    <h4>arraste a imagem da sua ASSINATURA aqui ou selecione um arquivo</h4>
+                </div>
+                
+                <h5>Apenas JPG, JPEG e PNG são aceitas. Recomendamos fundo branco ou transparente. Tamanho máximo: 240x180px</h5>
+                </section>
+
+
+            <section class="obervacao">
+                <label for="observacao" class="input-label"></label>
+                <input type="text" id="observacao" class="input-obs" placeholder="Observações">
+
+            </section>
+            
+            <section class="buttons">
+                <button class="button-gerar">Gerar recibo</button>
+                <button class="button-limpar">Limpar Formulário</button>
+            </section>
+
+
+    </main>
+
+    <footer>
+        <section class="footer">
+            <div id="rodape-texto">
+                <img id="logo-rodape" src="icon/desenvolve_logo_oficial.png">
+            </div>
+            <h5 id="texto-rodape">Este site foi desenvolvido por Felipe de Goes, aluno do Projeto Desenvolve 2023</h5>
+            <div id="rodape-icons">
+                <a href="https://github.com/lyppedegoes/desenvolve-turma13" target="_blank" rel="noopener noreferrer"><img src="icon/icon-github.svg"></a>
+                <a href="https://www.linkedin.com/in/felipedegoes/" target="_blank" rel="noopener noreferrer"><img src="icon/icon-linkedin.svg"></a>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

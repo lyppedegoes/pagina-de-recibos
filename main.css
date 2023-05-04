@@ -1,0 +1,182 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  
+    background-color: #00305A;
+  }
+
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 16px 32px;
+    gap: 16px;
+    border-radius: 0px 0px 32px 32px;
+    background-color: #DEE5EB;
+
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    padding: 32px;
+    gap: 0px;
+    border-radius: 32px;
+    background-color: #DEE5EB;
+  }
+
+  .dados {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+    border-radius: 16px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+
+  .dados-recebedor, .dados-emitente {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+  }
+
+.descricao-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+  .serv-prod {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .upload {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 16px 16px 0px;
+  }
+
+  .logo, .sign {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 16px;
+    width: 100%;
+
+    border: 2px dashed #00305A;
+    border-radius: 16px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 16px 0px 16px 16px;
+    gap: 16px;
+    
+  }
+
+  .button-gerar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border: 0px;
+
+    width: 200px;
+    height: 52px;
+
+    color: #FFFFFF;
+    background: #2C98F6;
+    border-radius: 16px;
+  }
+
+
+  .button-limpar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border: 0px;
+
+    width: 200px;
+    height: 52px;
+
+    color: #2C98F6;
+    background: #FFFFFF;
+    border: 1px solid #2C98F6;
+    border-radius: 16px;
+  }
+
+/* --------------------------------------------------------------------------------- */
+
+  @media (max-width: 768px) {
+
+    .dados {
+      flex-wrap: wrap;
+    }
+
+    .dados-recebedor, .dados-emitente {
+      width: 100%;
+    }
+    
+    .upload {
+      display: flex;
+      flex-direction: column;
+      padding: 16px 8px;
+    }
+
+    .logo, .sign {
+      width: 100%;
+  
+      border: 1px dashed #00305A;
+      border-radius: 16px;
+    }
+
+    .buttons {
+      padding: 16px 0px;
+    }
+  }
+
+  /* --------------------------------------------------------------------------------- */
+
+  @media (max-width: 599px) {
+
+    body {
+      padding: 0px 32px;
+    }
+  
+    main, header {
+      width: 100%;
+    }
+
+    .buttons {
+      flex-direction: column;
+      padding: 16px 0px;
+    }
+
+    .button-gerar, .button-limpar {
+      width: 100%;
+    }
+  }
