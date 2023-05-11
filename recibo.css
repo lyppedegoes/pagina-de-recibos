@@ -1,0 +1,17 @@
+.container-recibo {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+}
+
+.recibo-gerado {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+    border-radius: 8px;
+    border: 1px solid #000000;
+}
