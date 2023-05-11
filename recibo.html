@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="text.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="recibo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap">
+    <title>Gerador de Recibo</title>
+</head>
+<body>
+    <header>
+        <img src="icon/icon-logo.svg" alt="gerador de recibo">
+        <h1>Gerador de Recibo</h1>
+    </header>
+
+    <main>
+            <section class="container-recibo">
+                <div class="recibo-gerado">
+                    <h1>RECIBO<br>R$ <span id="valor">0,00</span></h1>
+                    <p>Recebemos de <span id="recebedor-nome-ok"></span>
+                    a importância de <span id="valor-ok">0,00</span>
+                    referente ao(s)
+                    abaixo descriminados:</p>
+                    <br>
+                    <br>
+                    <span id="descricao-ok">descrição</span>
+                    <br>
+                    <br>
+                    ASSINATURA
+
+                    <span id="data-ok"></span>
+                    <span id="emitente-nome-ok"></span>
+                    <span id="emitente-empresa-ok"></span>
+                    <span id="emitente-doc-ok"></span>
+                    <span id="observacao-ok"></span>
+
+                </div>
+                <section class="buttons">
+                    <button class="button-share">Compartilhar</button>
+                    <button class="button-voltar">cancelar</button>
+                </section>
+                
+            </section>
+
+    </main>
+
+    <footer>
+        <section class="footer">
+            <div id="rodape-texto">
+                <img id="logo-rodape" src="icon/desenvolve_logo_oficial.png">
+            </div>
+            <h5 id="texto-rodape">Este site foi desenvolvido por Felipe de Goes, aluno do Projeto Desenvolve 2023</h5>
+            <div id="rodape-icons">
+                <a href="https://github.com/lyppedegoes/desenvolve-turma13" target="_blank" rel="noopener noreferrer"><img src="icon/icon-github.svg"></a>
+                <a href="https://www.linkedin.com/in/felipedegoes/" target="_blank" rel="noopener noreferrer"><img src="icon/icon-linkedin.svg"></a>
+            </div>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

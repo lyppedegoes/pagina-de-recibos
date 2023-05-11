@@ -95,7 +95,7 @@ body {
     
   }
 
-  .button-gerar {
+  .button-gerar, .button-share {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -112,13 +112,12 @@ body {
   }
 
 
-  .button-limpar {
+  .button-limpar, .button-voltar {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 16px;
-    border: 0px;
 
     width: 200px;
     height: 52px;
@@ -176,7 +175,7 @@ body {
       padding: 16px 0px;
     }
 
-    .button-gerar, .button-limpar {
+    .button-gerar, .button-limpar, .button-share, .button-voltar {
       width: 100%;
     }
   }

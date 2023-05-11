@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="text.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="recibo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap">
@@ -21,55 +22,56 @@
     </header>
 
     <main>
+        <form>
 
-        <section class="dados">
-            <div class="dados-recebedor">
-                <h2>Dados do recebedor</h2>            
+            <section class="dados">
+                <div class="dados-recebedor">
+                    <h2>Dados do recebedor</h2>            
+                        <div class="input-container">
+                            <label for="recebedor-nome" class="input-label"></label>
+                            <input type="text" id="recebedor-nome" class="input-field" placeholder="Nome ou empresa" required>
+                        </div>
+                        <div class="input-container">
+                            <label for="valor" class="input-label"></label>
+                            <input type="number" step="0.01" id="valor" class="input-field" placeholder="Valor R$" required>
+                        </div>
+                </div>
+
+                <div class="dados-emitente">
+                    <h2>Dados do emitente</h2>
                     <div class="input-container">
-                        <label for="recebedor-nome" class="input-label"></label>
-                        <input type="text" id="recebedor-nome" class="input-field" placeholder="Nome ou empresa">
+                        <label for="emitente-nome" class="input-label"></label>
+                        <input type="text" id="emitente-nome" class="input-field" placeholder="Nome do representante" required>
                     </div>
                     <div class="input-container">
-                        <label for="valor" class="input-label"></label>
-                        <input type="number" id="valor" class="input-field" placeholder="Valor R$">
+                        <label for="doc" class="input-label"></label>
+                        <input type="number" id="doc" class="input-field" placeholder="CPF ou CNPJ">
                     </div>
-            </div>
-
-            <div class="dados-emitente">
-                <h2>Dados do emitente</h2>
-                <div class="input-container">
-                    <label for="emitente-nome" class="input-label"></label>
-                    <input type="text" id="emitente-nome" class="input-field" placeholder="Nome do representante">
+                    <div class="input-container">
+                        <label for="emitente-empresa" class="input-label"></label>
+                        <input type="text" id="emitente-empresa" class="input-field" placeholder="Empresa">
+                    </div>
+                    <div class="input-container">
+                        <label for="emitente-data" class="input-label"></label>
+                        <input type="date" id="emitente-data" class="input-field" placeholder="Data do Recibo" required>
+                    </div>
                 </div>
-                <div class="input-container">
-                    <label for="doc" class="input-label"></label>
-                    <input type="number" id="valor" class="input-field" placeholder="CPF ou CNPJ">
+            </section>
+                
+            <fieldset class="serv-prod">
+                <h4>Selecione o tipo de recibo:</h4>
+                <div>
+                <input type="radio" id="servico" name="servico" value=""
+                        checked>
+                <label for="servico">Serviço</label>
                 </div>
-                <div class="input-container">
-                    <label for="emitente-empresa" class="input-label"></label>
-                    <input type="text" id="emitente-empresa" class="input-field" placeholder="Empresa">
-                </div>
-                <div class="input-container">
-                    <label for="emitente-data" class="input-label"></label>
-                    <input type="date" id="emitente-data" class="input-field" placeholder="Data do Recibo">
-                </div>
-            </div>
-        </section>
             
-        <fieldset class="serv-prod">
-            <h4>Selecione o tipo de recibo:</h4>
-            <div>
-            <input type="radio" id="servico" name="servico" value=""
-                    checked>
-            <label for="servico">Serviço</label>
-            </div>
-        
-            <div>
-            <input type="radio" id="produto" name="produto" value="">
-            <label for="produto">Produto</label>
-            </div>  
-        </fieldset>
-            
+                <div>
+                <input type="radio" id="produto" name="produto" value="">
+                <label for="produto">Produto</label>
+                </div>  
+            </fieldset>
+                
             <section class="descricao">
                 <div class="descricao-container">
                     <label for="descricao"><h2>Descrição</h2></label>
@@ -99,10 +101,10 @@
             </section>
             
             <section class="buttons">
-                <button class="button-gerar">Gerar recibo</button>
-                <button class="button-limpar">Limpar Formulário</button>
+                <button onclick="gerarRecibo();" class="button-gerar">Gerar recibo</button>
+                <button onclick="limparForm();"class="button-limpar">Limpar Formulário</button>
             </section>
-
+        </form>
 
     </main>
 
@@ -118,5 +120,6 @@
             </div>
         </section>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
